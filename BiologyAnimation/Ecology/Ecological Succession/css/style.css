@@ -61,6 +61,10 @@ div.question-container {
     position: fixed;
     top: 80%;}
 
+    .result-alert {
+        width: 20%;
+        right: -20%; 
+    }
   
 }
 
@@ -130,6 +134,11 @@ and (max-device-width : 1024px) {
         width: 90%;
         height: 10%;
         font-size: 3vw !important;
+    }
+
+    .result-alert {
+        width: 20%;
+        right: -20%; /* This value will depend on your layout */
     }
 }
 
@@ -203,7 +212,7 @@ div.button-container {
 }
 .drpBox {
     position: absolute;
-    background: #34A0FF;
+    background: #346dff;
     border: 2px solid black;
     text-align: center;
     color: black;
@@ -259,8 +268,26 @@ div.hint-content{
 
 #result {
     position: absolute;
-    top: 95%;
     font-size: 1.5vw;
     font-weight: bold;
     float: center;
+}
+
+
+.result-alert {
+    position: absolute;
+    top: 10%; /* Adjust the top value */
+    right: 0;
+    width: 20%;
+    height: 80%; /* Adjust the height value */
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    z-index: 9999;
+    transform: translateY(0);
+    transition: right 0.3s ease;
 }
